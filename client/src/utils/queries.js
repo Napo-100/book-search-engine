@@ -18,3 +18,17 @@ export const GET_ME = gql`
     }
   }
 `;
+
+export const GET_BOOKS = gql`
+  {
+    books {
+      _id
+      authors
+      description
+      bookId
+      image
+      link
+      title
+    }
+  }
+`;

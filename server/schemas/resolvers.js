@@ -44,8 +44,8 @@ const resolvers = {
         const updatedUser = await User.findOneAndUpdate(
           { _id: context.user._id },
           { $addToSet: { savedBooks: body } },
-          { new: true, runValidators: true }
-        ).populate("savedBooks");
+          { new: true }
+        )
         return updatedUser;
       }
       throw new AuthenticationError("You need to be logged in!");
